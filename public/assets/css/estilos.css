@@ -1,0 +1,20 @@
+/* DIW · Base visual compartida. Consultar DESIGN.md antes de editar. */
+:root{
+  --ink:#171722; --paper:#faf6eb; --yellow:#ffdc38; --purple:#6536b8;
+  --surface:#fff; --muted:#51515b; --focus:#bd4100;
+  --font-body:system-ui,sans-serif; --font-label:monospace;
+  --line:2px solid var(--ink); --shadow-card:5px 5px 0 var(--ink);
+  --button-bg:var(--yellow); --button-text:var(--ink);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--font-body)}
+button,.button{font-family:var(--font-body);cursor:pointer;border:var(--line);border-radius:0;color:var(--button-text);background:var(--button-bg);text-decoration:none;display:inline-block}
+button:hover,.button:hover{filter:brightness(.96)}
+button:disabled{opacity:.5;cursor:not-allowed}
+a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible,select:focus-visible{outline:4px solid var(--focus);outline-offset:5px}
+.eyebrow{font:800 12px/1.4 var(--font-label);letter-spacing:1.5px;text-transform:uppercase}
+.card{background:var(--surface);border:var(--line);box-shadow:var(--shadow-card)}
+.small{font-size:14px}
+.muted{color:var(--muted)}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
