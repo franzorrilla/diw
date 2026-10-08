@@ -1,0 +1,6 @@
+# Imagen de portada
+Generada con la herramienta integrada de imágenes.
+Dirección de arte: Vitrine Studio, emparejada con Citron Counter en Katagami.
+Archivo: public/assets/images/citron-cursor.jpg
+
+Use case: stylized-concept. Asset type: educational web hero, square composition. A single sculptural oversized matte black computer cursor arrow, three-dimensional physical object, gently tilted in a three-quarter view as a symbol of interface design, a single hero subject floated centered on a seamless white-to-warm-off-white stage with no horizon line, lit with crisp even high-key studio light, warm white #FCFCF8 stage, citrus #C7F23A halo and faint cool deep-teal #063F3D shadow only, a soft glowing radial halo blooming outward directly behind the subject like backlight, a faint cool contact shadow pooled beneath, the subject rendered clean and matte and filling the entire frame edge to edge, quiet premium product-page calm. Avoid text, words, logos, watermark, captions, labels, UI chrome, buttons, price tags, borders, frame, empty margins, whitespace padding, multiple scattered objects, busy background, horizon line, room, furniture, dot pattern, grid lines, stripes, paper grain, noise texture, gradient banding, harsh shadows, dramatic chiaroscuro, lens flare, rainbow colors, oversaturation, muddy tones, cluttered composition.
