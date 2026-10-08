@@ -3,6 +3,7 @@ Proyecto de Fran Zorrilla para Diseño de Interfaces Web.
 
 ## Contenido
 - `public/index.html`: portada general de la asignatura.
+- `public/labs/principios-diseno/index.html`: cinco experimentos de jerarquía visual y conclusión; migrado de Google Sites.
 - `public/unidades/u01-composicion/index.html`: presentación de U01 con experimento de jerarquía, sesión de 55 minutos y reflexión exportable.
 - `public/unidades/u02-color/index.html`: inicio de U02 · Color, migrado del HTML incrustado; mantiene los enlaces a los Labs de Google Sites.
 - `public/labs/color/index.html`: Color bajo sospecha (v1.3).
