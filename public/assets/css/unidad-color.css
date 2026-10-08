@@ -1,0 +1,52 @@
+/* Inicio de U02 · distribución. Identidad compartida en estilos.css. */
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+a{color:inherit}
+h4{font-family:var(--font-heading);font-weight:800;letter-spacing:-.02em;line-height:1.25}
+p{margin:0}
+.skip{position:absolute;left:16px;top:-100px;background:var(--accent);color:var(--ink);padding:12px 20px;border-radius:var(--radius-control);z-index:10}
+.skip:focus{top:12px}
+.page{width:100%;max-width:1440px;margin:auto;display:grid;grid-template-columns:260px minmax(0,1fr)}
+.rail{align-self:start;position:sticky;top:0;padding:40px 26px;display:flex;flex-direction:column;gap:24px}
+.kicker,.job-num,.route-step,.time,.tag{font:600 12px/1.5 var(--font-label);letter-spacing:.06em}
+.kicker{color:var(--muted)}
+.rail h1{font-size:clamp(36px,4vw,58px);line-height:1;margin:0;letter-spacing:-.05em}
+.rail p{font-size:18px;line-height:1.5}
+.rail-box{padding:20px;background:var(--recess);border-radius:var(--radius);font-weight:600;line-height:1.4}
+.rail-foot{border-top:var(--line);padding-top:20px;font-size:16px;color:var(--muted)}
+.main{min-width:0;border-left:var(--line)}
+.hero{padding:72px 48px 56px;border-bottom:var(--line)}
+.hero-inner{max-width:1000px}
+.hero .eyebrow{color:var(--muted)}
+.hero h2{margin:24px 0;font-size:clamp(42px,6.2vw,82px);line-height:1.02;letter-spacing:-.045em}
+.hero h2 strong{color:var(--teal)}
+.hero p{max-width:750px;font-size:22px;line-height:1.5}
+.section{padding:48px;border-bottom:var(--line)}
+.section-title{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-bottom:32px}
+.section-title h3{margin:0;font-size:clamp(28px,3vw,40px);line-height:1.1}
+.section-title p{color:var(--muted);line-height:1.5}
+.jobs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.job{border-top:var(--line);padding-top:18px;min-width:0}
+.job-num{color:var(--teal)}
+.job h4{margin:18px 0 10px;font-size:20px;overflow-wrap:anywhere}
+.job p{font-size:18px;line-height:1.4;color:var(--muted)}
+.route{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.route-card{border-top:var(--line);padding:24px 0;display:flex;flex-direction:column;align-items:start;min-width:0}
+.route-step{margin-bottom:16px;color:var(--teal);font-size:22px}
+.route-card h4{margin:0 0 12px;font-size:22px}
+.route-card p{color:var(--muted);line-height:1.5}
+.time{margin-top:auto;padding-top:20px}
+.resources{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.resource{padding:28px;background:var(--surface);border-radius:var(--radius);display:flex;flex-direction:column;align-items:start;min-width:0;box-shadow:var(--shadow-card)}
+.resource h4{margin:0 0 16px;font-size:26px}
+.resource p{line-height:1.5}
+.resource .tag{margin-bottom:20px;color:var(--muted)}
+.resource.featured{background:var(--teal);color:var(--surface)}
+.resource.featured .tag{color:var(--surface)}
+.resource .cta{margin-top:28px;padding:12px 22px;font-weight:700}
+.resource.featured .cta:focus-visible{outline-color:var(--accent)}
+.close{margin:48px;padding:36px;background:var(--teal);color:var(--surface);border-radius:var(--radius)}
+.close .quote{font:800 clamp(28px,3.8vw,48px)/1.1 var(--font-heading);letter-spacing:-.035em}
+.close p{margin-top:24px;max-width:720px;line-height:1.5}
+@media(max-width:1150px){.jobs{grid-template-columns:repeat(3,minmax(0,1fr))}.hero,.section{padding:40px 30px}.close{margin:30px}.section-title{grid-template-columns:1fr;gap:16px}}
+@media(max-width:820px){.page{grid-template-columns:1fr}.rail{position:static;padding:28px;gap:16px;border-bottom:var(--line)}.rail h1{font-size:48px}.rail-box{max-width:620px}.main{border-left:0}.hero,.section{padding:36px 28px}.hero h2{font-size:clamp(40px,8vw,64px)}.hero p{font-size:20px}.close{margin:28px}}
+@media(max-width:540px){.rail,.hero,.section{padding:28px 20px}.jobs{grid-template-columns:repeat(2,minmax(0,1fr))}.route,.resources{grid-template-columns:1fr}.resource{padding:24px}.close{margin:24px 20px;padding:26px}.hero h2{font-size:clamp(32px,8.5vw,46px)}.job h4{font-size:19px}}
