@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sesión 1 · ¿Dónde has mirado primero?</title>
+<meta name="description" content="Cinco experimentos de tamaño, contraste, posición, espacio y competencia visual para descubrir la jerarquía de una interfaz.">
+<link rel="stylesheet" href="../../assets/css/estilos.css">
+<link rel="stylesheet" href="../../assets/css/principios-diseno.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div class="app">
+  <section class="hero">
+    <a href="../../unidades/u01-composicion/">← U01 · Composición, percepción y jerarquía</a>
+    <div class="eyebrow">DIW · Sesión 1 · EV1</div>
+    <h1>¿Dónde has mirado primero?</h1>
+    <p>Esta experiencia no va de “me gusta / no me gusta”. Va de entender cómo una interfaz guía la atención de quien la usa. Observa, decide y justifica.</p>  </section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="score">
+        <span>Progreso</span>
+        <strong><span id="doneCount">0</span>/6 etapas</strong>
+        <span><span id="points">0</span>/5 respuestas registradas</span>
+      </div>
+      <nav class="steps" id="stepList" aria-label="Etapas de la actividad"></nav>
+    </aside>
+
+    <main class="panel" id="contenido">
+<noscript><p>Activa JavaScript para recorrer los experimentos. Esta actividad necesita los controles para avanzar.</p></noscript>
+      <div class="screen active" data-step="0">
+        <span class="badge">Inicio</span>
+        <h2 tabindex="-1">Antes de empezar</h2>
+        <p class="lead">Vas a recorrer 5 microexperimentos y una conclusión. En cada pantalla decide <strong>qué has mirado primero</strong> o <strong>qué problema de jerarquía aparece</strong>. Después justificaréis en clase el porqué.</p>
+        <div class="summary-card">
+          <h3>Qué descubriremos hoy</h3>
+          <ul class="klist">
+            <li>La atención no se reparte por igual en una interfaz.</li>
+            <li>Tamaño, contraste, posición y espacio modifican la jerarquía visual.</li>
+            <li>Si todo intenta destacar, la interfaz deja de comunicar una prioridad clara.</li>
+          </ul>
+        </div>
+        <div class="summary-card">
+          <h3>Cómo recorrer la actividad</h3>
+          <p class="small">Pulsa <strong>Comenzar</strong>. Responde una opción en cada experimento. Al hacerlo aparecerá una explicación breve y se desbloqueará el siguiente paso. En los cuatro primeros experimentos registramos tu percepción: no hay una mirada correcta o incorrecta. En el quinto analizamos un problema de jerarquía.</p>
+        </div>
+        <div class="controls">
+          <button class="btn ghost" disabled>Anterior</button>
+          <button class="btn primary" onclick="goToStep(1)">Comenzar</button>
+        </div>
+      </div>
+
+      <div class="screen" data-step="1">
+        <span class="badge">Experimento 1 · Tamaño</span>
+        <h2 tabindex="-1">Lo más grande pesa más</h2>
+        <p class="lead">Aquí comparamos sobre todo el tamaño. Los dos botones tienen el mismo color; su ubicación también puede influir. ¿Cuál miras primero?</p>
+        <div class="experiment">
+          <div class="mock">
+            <div class="exp1-wrap">
+              <div class="topbar"><div class="brand"></div><div class="nav"><span></span><span></span><span></span></div></div>
+              <div class="titleLine" style="width:58%"></div>
+              <div class="textLine" style="width:78%"></div>
+              <div class="textLine" style="width:54%"></div>
+              <div class="same-row">
+                <div class="same-btn small">Inscribirme</div>
+                <div class="same-btn big">Inscribirme</div>
+              </div>
+            </div>
+          </div>
+          <div class="question" data-kind="observation">
+            <h3>¿Qué has mirado primero?</h3>
+            <div class="options">
+              <button class="option">El botón pequeño de la izquierda</button>
+              <button class="option">El botón grande de la derecha</button>
+              <button class="option">El texto superior</button>
+            </div>
+            <div class="feedback" role="status" aria-live="polite" aria-atomic="true"><strong>Clave:</strong> el <strong>tamaño</strong> crea jerarquía. Si dos elementos son parecidos y uno es mucho más grande, suele convertirse en el foco principal.</div>
+          </div>
+        </div>
+        <div class="controls"><button class="btn secondary" onclick="goToStep(0)">Anterior</button><button id="next1" class="btn primary" disabled onclick="goToStep(2)">Siguiente</button></div>
+      </div>
+
+      <div class="screen" data-step="2">
+        <span class="badge">Experimento 2 · Contraste</span>
+        <h2 tabindex="-1">Lo distinto destaca</h2>
+        <p class="lead">Ahora mantenemos un tamaño parecido y jugamos sobre todo con el contraste. ¿Qué botón se lleva tu atención antes?</p>
+        <div class="experiment">
+          <div class="mock">
+            <div class="exp2-wrap">
+              <div class="contrast-btn muted">Ver programa</div>
+              <div class="contrast-btn muted">Más información</div>
+              <div class="contrast-btn focus">Inscribirme</div>
+            </div>
+          </div>
+          <div class="question" data-kind="observation">
+            <h3>¿Qué has mirado primero?</h3>
+            <div class="options">
+              <button class="option">El botón “Ver programa”</button>
+              <button class="option">El botón “Más información”</button>
+              <button class="option">El botón oscuro “Inscribirme”</button>
+            </div>
+            <div class="feedback" role="status" aria-live="polite" aria-atomic="true"><strong>Clave:</strong> el <strong>contraste</strong> llama la atención. Un elemento con mayor oposición de color o luminosidad puede imponerse incluso sin ser el más grande.</div>
+          </div>
+        </div>
+        <div class="controls"><button class="btn secondary" onclick="goToStep(1)">Anterior</button><button id="next2" class="btn primary" disabled onclick="goToStep(3)">Siguiente</button></div>
+      </div>
+
+      <div class="screen" data-step="3">
+        <span class="badge">Experimento 3 · Posición</span>
+        <h2 tabindex="-1">El lugar también comunica</h2>
+        <p class="lead">Los tres bloques son casi iguales. Lo que cambia es su posición en la composición. ¿Cuál parece entrar antes en tu recorrido visual?</p>
+        <div class="experiment">
+          <div class="mock">
+            <div class="exp3-stage">
+              <div class="pos-card pos-top"><div class="textLine"></div><div class="textLine" style="width:60%"></div></div>
+              <div class="pos-card pos-mid"><div class="textLine"></div><div class="textLine" style="width:60%"></div></div>
+              <div class="pos-card pos-low"><div class="textLine"></div><div class="textLine" style="width:60%"></div></div>
+            </div>
+          </div>
+          <div class="question" data-kind="observation">
+            <h3>¿Qué has mirado primero?</h3>
+            <div class="options">
+              <button class="option">La tarjeta superior izquierda</button>
+              <button class="option">La tarjeta central</button>
+              <button class="option">La tarjeta inferior</button>
+            </div>
+            <div class="feedback" role="status" aria-live="polite" aria-atomic="true"><strong>Clave:</strong> la <strong>posición</strong> cambia el recorrido de lectura. El recorrido también depende de la tarea, del contexto y de nuestros hábitos de lectura. La zona superior izquierda puede ser un punto de entrada, pero no es universal.</div>
+          </div>
+        </div>
+        <div class="controls"><button class="btn secondary" onclick="goToStep(2)">Anterior</button><button id="next3" class="btn primary" disabled onclick="goToStep(4)">Siguiente</button></div>
+      </div>
+
+      <div class="screen" data-step="4">
+        <span class="badge">Experimento 4 · Espacio</span>
+        <h2 tabindex="-1">El espacio en blanco también organiza</h2>
+        <p class="lead">Aquí el contenido de ambos bloques es parecido. Lo que cambia es la saturación y el aire disponible alrededor.</p>
+        <div class="experiment">
+          <div class="mock">
+            <div class="exp4-stage">
+              <div class="dense">
+                <div class="textLine" style="width:80%"></div>
+                <div class="textLine"></div><div class="textLine"></div><div class="textLine"></div>
+                <div class="grid2" style="gap:6px;margin-top:8px">
+                  <div class="card" style="padding:8px"><div class="textLine"></div><div class="textLine" style="width:58%"></div></div>
+                  <div class="card" style="padding:8px"><div class="textLine"></div><div class="textLine" style="width:58%"></div></div>
+                </div>
+              </div>
+              <div class="airy">
+                <div class="textLine" style="width:70%"></div>
+                <div class="textLine" style="width:76%"></div>
+                <div class="solidBtn btn-white" style="margin-top:26px">Inscribirme</div>
+              </div>
+            </div>
+          </div>
+          <div class="question" data-kind="observation">
+            <h3>¿Qué has mirado primero?</h3>
+            <div class="options">
+              <button class="option">El bloque más saturado de la izquierda</button>
+              <button class="option">El bloque con más aire de la derecha</button>
+              <button class="option">Ambos exactamente por igual</button>
+            </div>
+            <div class="feedback" role="status" aria-live="polite" aria-atomic="true"><strong>Clave:</strong> el <strong>espacio</strong> separa, ordena y da protagonismo. El espacio puede dar claridad y protagonismo, pero no determina por sí solo qué mirarás primero. En este ejemplo también cambia la cantidad de contenido.</div>
+          </div>
+        </div>
+        <div class="controls"><button class="btn secondary" onclick="goToStep(3)">Anterior</button><button id="next4" class="btn primary" disabled onclick="goToStep(5)">Siguiente</button></div>
+      </div>
+
+      <div class="screen" data-step="5">
+        <span class="badge">Experimento 5 · Competencia visual</span>
+        <h2 tabindex="-1">Cuando todo grita, nada manda</h2>
+        <p class="lead">Esta pantalla compite consigo misma. Ya no intentamos aislar una variable: queremos detectar el problema de jerarquía.</p>
+        <div class="experiment">
+          <div class="mock">
+            <div class="exp5-stage">
+              <div class="promo">¡Últimas plazas! · ¡Novedad! · ¡Descuento!</div>
+              <div class="row">
+                <div class="card"><div class="solidBtn btn-yellow">Comprar ya</div><div class="textLine" style="width:74%;margin-top:12px"></div><div class="textLine" style="width:55%"></div></div>
+                <div class="card"><div class="solidBtn btn-black">Reservar</div><div class="textLine" style="width:74%;margin-top:12px"></div><div class="textLine" style="width:55%"></div></div>
+              </div>
+              <div class="card"><div class="solidBtn btn-orange">Apúntate</div><div class="textLine" style="width:82%;margin-top:12px"></div><div class="textLine" style="width:55%"></div></div>
+            </div>
+          </div>
+          <div class="question" data-correct="2">
+            <h3>¿Qué ocurre aquí?</h3>
+            <div class="options">
+              <button class="option">La jerarquía es clarísima</button>
+              <button class="option">Solo destaca una acción principal</button>
+              <button class="option">Hay demasiados focos de atención y no se entiende la prioridad</button>
+            </div>
+            <div class="feedback" role="status" aria-live="polite" aria-atomic="true"><strong>Clave:</strong> cuando <strong>todo intenta destacar</strong>, la interfaz pierde una prioridad clara. El usuario no sabe qué es lo primero o más importante.</div>
+          </div>
+        </div>
+        <div class="warning"><strong>Idea clave de la sesión:</strong> si todo parece importante, nada resulta claramente importante.</div>
+        <div class="controls"><button class="btn secondary" onclick="goToStep(4)">Anterior</button><button id="next5" class="btn primary" disabled onclick="goToStep(6)">Ver conclusión</button></div>
+      </div>
+
+      <div class="screen" data-step="6">
+        <span class="badge">Cierre</span>
+        <h2 tabindex="-1">¿Qué acabas de comprobar?</h2>
+        <p class="lead">La jerarquía visual no depende de una sola “regla bonita”. El diseñador puede modificar la atención usando distintos recursos.</p>
+
+        <div class="summary-card">
+          <h3>Los 5 principios que acabas de experimentar</h3>
+          <ul class="klist">
+            <li><strong>Tamaño:</strong> un elemento mayor suele adquirir más peso visual.</li>
+            <li><strong>Contraste:</strong> lo que se diferencia con claridad destaca frente a lo que lo rodea.</li>
+            <li><strong>Posición:</strong> la ubicación modifica el recorrido visual.</li>
+            <li><strong>Espacio:</strong> separar y dar aire también crea importancia.</li>
+            <li><strong>Competencia visual:</strong> si todo intenta destacar, la prioridad se vuelve confusa.</li>
+          </ul>
+        </div>
+
+        <div class="warning">
+          <strong>Pregunta para la puesta en común:</strong> ¿qué recurso visual te ha parecido más eficaz para dirigir la atención?
+        </div>
+
+        <div class="controls">
+          <button class="btn secondary" onclick="goToStep(5)">Anterior</button>
+          <button class="btn primary" onclick="goToStep(0)">Volver al inicio</button>
+          <button class="btn ghost" id="restart" type="button">Reiniciar respuestas</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="../../assets/js/principios-diseno.js"></script>
+</body>
+</html>
