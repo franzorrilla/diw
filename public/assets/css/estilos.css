@@ -1,20 +1,27 @@
-/* DIW · Base visual compartida. Consultar DESIGN.md antes de editar. */
+/* DIW · Citron Counter. Fuente de verdad visual: consultar DESIGN.md. */
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Schibsted+Grotesk:wght@600;700;800&family=Spline+Sans+Mono:wght@500;600&display=swap');
 :root{
-  --ink:#171722; --paper:#faf6eb; --yellow:#ffdc38; --purple:#6536b8;
-  --surface:#fff; --muted:#51515b; --focus:#bd4100;
-  --font-body:system-ui,sans-serif; --font-label:monospace;
-  --line:2px solid var(--ink); --shadow-card:5px 5px 0 var(--ink);
-  --button-bg:var(--yellow); --button-text:var(--ink);
+  --ink:#0B0C0A; --paper:#FCFCF8; --surface:#FFFFFF; --recess:#F4F3EC;
+  --accent:#C7F23A; --teal:#063F3D; --halo:#E7FF6E; --border:#E2E1D6;
+  --muted:#626159; --focus:var(--teal);
+  --font-body:'Afacad',system-ui,sans-serif;
+  --font-heading:'Schibsted Grotesk',system-ui,sans-serif;
+  --font-label:'Spline Sans Mono',monospace;
+  --radius:22px; --radius-control:10px; --radius-pill:9999px;
+  --line:1px solid var(--border); --shadow-card:0 18px 48px rgba(38,37,29,.08);
+  --button-bg:var(--accent); --button-text:var(--ink);
+  --motion:180ms cubic-bezier(.2,.8,.2,1);
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--font-body)}
-button,.button{font-family:var(--font-body);cursor:pointer;border:var(--line);border-radius:0;color:var(--button-text);background:var(--button-bg);text-decoration:none;display:inline-block}
-button:hover,.button:hover{filter:brightness(.96)}
+body{margin:0;background:var(--paper);color:var(--ink);font:19px/1.6 var(--font-body)}
+h1,h2,h3{font-family:var(--font-heading);font-weight:800;letter-spacing:-.02em}
+button,.button{font-family:var(--font-body);cursor:pointer;border:1px solid transparent;border-radius:var(--radius-pill);color:var(--button-text);background:var(--button-bg);text-decoration:none;display:inline-block;transition:transform var(--motion),box-shadow var(--motion);min-height:44px}
+button:hover:not(:disabled),.button:hover{transform:translateY(-2px)}
 button:disabled{opacity:.5;cursor:not-allowed}
-a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible,select:focus-visible{outline:4px solid var(--focus);outline-offset:5px}
-.eyebrow{font:800 12px/1.4 var(--font-label);letter-spacing:1.5px;text-transform:uppercase}
-.card{background:var(--surface);border:var(--line);box-shadow:var(--shadow-card)}
-.small{font-size:14px}
+a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.eyebrow{font:600 11px/1.5 var(--font-label);letter-spacing:1.2px;text-transform:uppercase}
+.card{background:var(--surface);border:0;border-radius:var(--radius);box-shadow:var(--shadow-card)}
+.small{font-size:16px}
 .muted{color:var(--muted)}
 [hidden]{display:none!important}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*{transition:none!important}button:hover:not(:disabled),.button:hover{transform:none}}
