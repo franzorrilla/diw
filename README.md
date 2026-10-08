@@ -3,6 +3,7 @@ Proyecto de Fran Zorrilla para Diseño de Interfaces Web.
 
 ## Contenido
 - `public/index.html`: portada general de la asignatura.
+- `public/unidades/u02-color/index.html`: inicio de U02 · Color, migrado del HTML incrustado; mantiene los enlaces a los Labs de Google Sites.
 - `public/labs/color/index.html`: Color bajo sospecha (v1.3).
 - `scripts/check_site.py`: comprobaciones de IDs, idioma, rutas locales y sintaxis JavaScript.
 - `.github/workflows/pages.yml`: comprueba propuestas y publica los cambios de main.
