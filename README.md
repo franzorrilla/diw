@@ -45,3 +45,6 @@ Los HTML funcionan sin compilación ni dependencias de terceros.
 Ambas páginas cargan primero la base común. Los colores de los ejercicios permanecen independientes.
 Para cambiar los botones principales, editar --button-bg y --button-text en la base y verificar contraste.
 Los HTML requieren la carpeta assets: publicar public/ completa o insertar la URL de Pages en Sites.
+
+## Lab 02 · Composición
+`public/labs/u01-lab02/index.html`: observación, tres marcadores sobre la captura original, maqueta y conclusión exportable para Classroom. Conserva las dimensiones del HTML de origen y utiliza Citron Counter. Borrador local en el navegador, sin envío de respuestas.
