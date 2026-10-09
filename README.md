@@ -48,3 +48,6 @@ Los HTML requieren la carpeta assets: publicar public/ completa o insertar la UR
 
 ## Lab 02 · Composición
 `public/labs/u01-lab02/index.html`: observación, tres marcadores sobre la captura original, maqueta y conclusión exportable para Classroom. Conserva las dimensiones del HTML de origen y utiliza Citron Counter. Borrador local en el navegador, sin envío de respuestas.
+
+## Laboratorio · Percepción y Gestalt
+`public/labs/percepcion-gestalt/index.html`: primera mirada de cinco segundos, seis estaciones perceptivas, taller de rediseño y entrega para Classroom. Guarda las respuestas en el navegador; requiere registrar al menos cuatro hallazgos. Conserva los colores didácticos del original.
