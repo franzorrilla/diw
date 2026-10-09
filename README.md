@@ -3,6 +3,7 @@ Proyecto de Fran Zorrilla para Diseño de Interfaces Web.
 
 ## Contenido
 - `public/index.html`: portada general de la asignatura.
+- `public/labs/u01-lab01/index.html`: laboratorio de jerarquía con cinco controles y evidencia copiable o descargable para Classroom.
 - `public/teoria/seis-principios/index.html`: presentación original de Slides incrustada y seis casos de detectives visuales.
 - `public/labs/principios-diseno/index.html`: cinco experimentos de jerarquía visual y conclusión; migrado de Google Sites.
 - `public/unidades/u01-composicion/index.html`: presentación de U01 con experimento de jerarquía, sesión de 55 minutos y reflexión exportable.
