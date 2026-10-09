@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>U02 · LAB 01 · La paleta se ha roto</title>
+<link rel="stylesheet" href="../../assets/css/estilos.css">
+<link rel="stylesheet" href="../../assets/css/paleta-rota.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="rail">
+    <div class="kicker">U02 · LAB 01</div>
+    <h1>LA PALETA<br>SE HA ROTO.</h1>
+    <p>Reconstruye las mezclas y demuestra que entiendes de dónde sale cada color.</p>
+
+    <div class="mission">Reto: completa la paleta con menos de 3 errores. Si los superas, podrás seguir practicando con pistas.</div>
+
+    <div class="lives">
+      Margen del reto
+      <span class="error-count" id="errorCount" role="status">Errores: 0</span><div class="hearts" aria-hidden="true">
+        <div class="heart" id="heart1">●</div>
+        <div class="heart" id="heart2">●</div>
+        <div class="heart" id="heart3">●</div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <button class="step active" data-step="0"><span class="stepnum">01</span><span>Secundarios</span></button>
+      <button class="step locked" data-step="1"><span class="stepnum">02</span><span>Terciarios</span></button>
+      <button class="step locked" data-step="2"><span class="stepnum">03</span><span>El intruso</span></button>
+      <button class="step locked" data-step="3"><span class="stepnum">04</span><span>Sin nombres</span></button>
+    </div>
+
+    <div class="rail-foot">
+      No memorices colores.<br>
+      Entiende el nivel de mezcla.
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <strong id="topQuestion">Nivel 1 · Fabrica los secundarios</strong>
+      <div class="score" aria-live="polite">Aciertos: <span id="score">0</span></div>
+    </header>
+
+    <div class="viewport">
+
+      <!-- LEVEL 1 -->
+      <section class="screen active" data-screen="0">
+        <span class="badge">Nivel 1</span>
+        <h2>Fabrica los secundarios</h2>
+        <p class="intro">Reconstruye violeta, verde y naranja usando rojo, azul y amarillo: el modelo didáctico RYB. Estas muestras representan mezclas de pigmentos de forma aproximada; no son mezclas de luz RGB. Selecciona una receta y pulsa sus dos colores.</p>
+
+        <div class="panel soft">
+          <div class="recipe-grid">
+            <article class="recipe" data-recipe="violet" role="button" tabindex="0" aria-pressed="false" aria-label="Seleccionar receta de violeta">
+              <h3>VIOLETA</h3>
+              <div class="slots">
+                <div class="slot" data-slot="a">?</div><div class="plus">+</div><div class="slot" data-slot="b">?</div>
+              </div>
+              <div class="target-result" style="background:var(--violet)">VIOLETA</div>
+            </article>
+
+            <article class="recipe" data-recipe="green" role="button" tabindex="0" aria-pressed="false" aria-label="Seleccionar receta de verde">
+              <h3>VERDE</h3>
+              <div class="slots">
+                <div class="slot" data-slot="a">?</div><div class="plus">+</div><div class="slot" data-slot="b">?</div>
+              </div>
+              <div class="target-result" style="background:var(--green)">VERDE</div>
+            </article>
+
+            <article class="recipe" data-recipe="orange" role="button" tabindex="0" aria-pressed="false" aria-label="Seleccionar receta de naranja">
+              <h3>NARANJA</h3>
+              <div class="slots">
+                <div class="slot" data-slot="a">?</div><div class="plus">+</div><div class="slot" data-slot="b">?</div>
+              </div>
+              <div class="target-result" style="background:var(--orangec)">NARANJA</div>
+            </article>
+          </div>
+
+          <div class="pick-row">
+            <button class="pick red" data-color="red">ROJO</button>
+            <button class="pick blue" data-color="blue">AZUL</button>
+            <button class="pick yellow" data-color="yellow">AMARILLO</button>
+          </div>
+
+          <div class="recipe-actions">
+            <button class="btn" id="resetLevel1">Borrar mezclas</button>
+            <button class="btn primary" id="checkLevel1">Comprobar nivel</button>
+          </div>
+
+          <div role="status" class="hint" id="hint1"></div>
+        </div>
+      </section>
+
+      <!-- LEVEL 2 -->
+      <section class="screen" data-screen="1">
+        <span class="badge">Nivel 2</span>
+        <h2>Fabrica un terciario</h2>
+        <p class="intro">Ahora cambia la lógica: un terciario surge al combinar un primario con un secundario vecino en el círculo RYB. Clasifica cada resultado.</p>
+
+        <div class="tertiary-board">
+          <article class="challenge-card" data-tertiary="redorange">
+            <div class="challenge-head"><h3>Rojo + Naranja</h3><span>→</span></div>
+            <div class="mixline">
+              <div class="colorpill" style="background:var(--red)">ROJO</div>
+              <div class="eq">+</div>
+              <div class="colorpill" style="background:var(--orangec)">NARANJA</div>
+              <div class="eq">=</div>
+              <div class="colorpill" style="background:var(--redorange)">ROJO-NARANJA</div>
+            </div>
+            <div class="classify">
+              <button class="classbtn" data-choice="primary">Primario</button>
+              <button class="classbtn" data-choice="secondary">Secundario</button>
+              <button class="classbtn" data-choice="tertiary">Terciario</button>
+            </div>
+            <div role="status" class="hint"></div>
+          </article>
+
+          <article class="challenge-card" data-tertiary="yellowgreen">
+            <div class="challenge-head"><h3>Amarillo + Verde</h3><span>→</span></div>
+            <div class="mixline">
+              <div class="colorpill yellow" style="background:var(--yellowc)">AMARILLO</div>
+              <div class="eq">+</div>
+              <div class="colorpill" style="background:var(--green)">VERDE</div>
+              <div class="eq">=</div>
+              <div class="colorpill" style="background:var(--yellowgreen)">AMARILLO-VERDE</div>
+            </div>
+            <div class="classify">
+              <button class="classbtn" data-choice="primary">Primario</button>
+              <button class="classbtn" data-choice="secondary">Secundario</button>
+              <button class="classbtn" data-choice="tertiary">Terciario</button>
+            </div>
+            <div role="status" class="hint"></div>
+          </article>
+
+          <article class="challenge-card" data-tertiary="blueviolet">
+            <div class="challenge-head"><h3>Azul + Violeta</h3><span>→</span></div>
+            <div class="mixline">
+              <div class="colorpill" style="background:var(--blue)">AZUL</div>
+              <div class="eq">+</div>
+              <div class="colorpill" style="background:var(--violet)">VIOLETA</div>
+              <div class="eq">=</div>
+              <div class="colorpill" style="background:var(--blueviolet)">AZUL-VIOLETA</div>
+            </div>
+            <div class="classify">
+              <button class="classbtn" data-choice="primary">Primario</button>
+              <button class="classbtn" data-choice="secondary">Secundario</button>
+              <button class="classbtn" data-choice="tertiary">Terciario</button>
+            </div>
+            <div role="status" class="hint"></div>
+          </article>
+        </div>
+
+        <div class="recipe-actions">
+          <button class="btn primary" id="checkLevel2">Continuar cuando tengas los 3</button>
+        </div>
+      </section>
+
+      <!-- LEVEL 3 -->
+      <section class="screen" data-screen="2">
+        <span class="badge">Nivel 3</span>
+        <h2>Encuentra el intruso</h2>
+        <p class="intro">Tres recetas son correctas. Una usa una clasificación equivocada. Localízala y explica mentalmente por qué.</p>
+
+        <div class="intruder-grid">
+          <button class="intruder" data-intruder="false">Rojo + Azul → Violeta · <strong>Secundario</strong></button>
+          <button class="intruder" data-intruder="false">Azul + Amarillo → Verde · <strong>Secundario</strong></button>
+          <button class="intruder" data-intruder="false">Amarillo + Rojo → Naranja · <strong>Secundario</strong></button>
+          <button class="intruder" data-intruder="true">Azul + Violeta → Azul-violeta · <strong>Secundario</strong></button>
+        </div>
+
+        <div class="explanation" id="intruderExplanation">
+          Correcto. Azul es primario y violeta es secundario, así que el resultado pertenece al nivel <strong>terciario</strong>, no al secundario.
+        </div>
+
+        <div role="status" class="hint" id="hint3"></div>
+      </section>
+
+      <!-- LEVEL 4 -->
+      <section class="screen" data-screen="3">
+        <span class="badge">Nivel 4</span>
+        <h2>Sin nombres</h2>
+        <p class="intro">Ahora no tienes etiquetas. Interpreta la mezcla únicamente por su estructura y clasifica el resultado.</p>
+
+        <div class="final-grid">
+          <article class="final-card" data-final="secondary">
+            <div class="visual-equation">
+              <div class="swatch" style="background:var(--red)" role="img" aria-label="Rojo"></div>
+              <div class="eq">+</div>
+              <div class="swatch" style="background:var(--yellowc)" role="img" aria-label="Amarillo"></div>
+              <div class="eq">=</div>
+              <div class="swatch" style="background:var(--orangec)" role="img" aria-label="Naranja"></div>
+            </div>
+            <div class="answer-row">
+              <button class="classbtn" data-answer="primary">Primario</button>
+              <button class="classbtn" data-answer="secondary">Secundario</button>
+              <button class="classbtn" data-answer="tertiary">Terciario</button>
+            </div>
+            <div role="status" class="result-badge"></div>
+          </article>
+
+          <article class="final-card" data-final="tertiary">
+            <div class="visual-equation">
+              <div class="swatch" style="background:var(--blue)" role="img" aria-label="Azul"></div>
+              <div class="eq">+</div>
+              <div class="swatch" style="background:var(--violet)" role="img" aria-label="Violeta"></div>
+              <div class="eq">=</div>
+              <div class="swatch" style="background:var(--blueviolet)" role="img" aria-label="Azul-violeta"></div>
+            </div>
+            <div class="answer-row">
+              <button class="classbtn" data-answer="primary">Primario</button>
+              <button class="classbtn" data-answer="secondary">Secundario</button>
+              <button class="classbtn" data-answer="tertiary">Terciario</button>
+            </div>
+            <div role="status" class="result-badge"></div>
+          </article>
+        </div>
+
+        <div class="endbox" id="endbox" style="display:none;margin-top:14px">
+          <h3 id="rankTitle">Resultado</h3>
+          <div id="rankText"></div>
+          <span class="rank" id="rankBadge"></span><div class="recipe-actions"><button class="btn dark" id="copyReport">Copiar para Classroom</button><button class="btn" id="downloadReport">Descargar .txt</button></div><p id="exportStatus" role="status"></p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <button class="btn" id="prevBtn" disabled>← Anterior</button>
+      <small id="footerHelp">Reconstruye primero los tres secundarios.</small>
+      <button class="btn primary" id="nextBtn" disabled>Siguiente →</button>
+    </footer>
+  </main>
+</div>
+
+<script src="../../assets/js/paleta-rota.js" defer></script>
+</body>
+</html>

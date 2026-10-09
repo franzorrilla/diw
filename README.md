@@ -51,3 +51,6 @@ Los HTML requieren la carpeta assets: publicar public/ completa o insertar la UR
 
 ## Laboratorio · Percepción y Gestalt
 `public/labs/percepcion-gestalt/index.html`: primera mirada de cinco segundos, seis estaciones perceptivas, taller de rediseño y entrega para Classroom. Guarda las respuestas en el navegador; requiere registrar al menos cuatro hallazgos. Conserva los colores didácticos del original.
+
+## U02 · Lab 01 · La paleta se ha roto
+`public/labs/paleta-rota/index.html`: cuatro niveles sobre mezclas RYB, pistas y resultado exportable. Los nueve colores didácticos mantienen sus valores originales, independientes de Citron Counter. El reto permite seguir practicando después de tres errores y contabiliza todos.
