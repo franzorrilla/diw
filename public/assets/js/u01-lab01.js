@@ -23,13 +23,13 @@ function update(){
 }
 document.querySelectorAll('.control input').forEach(input=>input.addEventListener(input.type==='range'?'input':'change',update));
 function checkLab(){
- const s=settings();const notes=[s.contrast==='high'?'Contraste: el texto blanco sobre fondo oscuro se distingue más que en el gris inicial.':'Contraste: el texto blanco sobre gris claro sigue siendo difícil de leer. Prueba el contraste alto.',`Tamaño: nivel ${s.size} de 24. Compara su peso con «Descargar programa», sin perder legibilidad ni desbordar el espacio.`,`Espacio: ${s.space} px alrededor del bloque. Observa si ayuda a separar la acción del resto.`,s.weight==='900'?'Peso: la variante más fuerte puede añadir énfasis; su efecto depende de la fuente.':'Peso: mantienes la negrita inicial.',s.position==='center'?'Posición: has centrado la acción dentro de su tarjeta. Comprueba si encaja con el recorrido; centrar no es una mejora automática.':'Posición: la acción se alinea a la izquierda dentro de su tarjeta. Valora su relación con el texto.', 'No hay una combinación ganadora: pide a otra persona que identifique la acción principal y justifica tus decisiones.'];
+ const s=settings();const notes=[s.contrast==='high'?'Contraste: el texto blanco sobre fondo oscuro se distingue más que en el gris inicial.':'Contraste: el texto blanco sobre gris claro sigue siendo difícil de leer. Prueba el contraste alto.',`Tamaño: nivel ${s.size} de 24. Compara su peso con «Descargar programa», sin perder legibilidad ni desbordar el espacio.`,`Espacio: ${s.space} px alrededor del bloque. Observa si ayuda a separar la acción del resto.`,s.weight==='700'?'Peso: has aplicado negrita a «Inscribirme». Compárala con el peso normal para valorar su énfasis.':'Peso: «Inscribirme» usa un trazo normal. Prueba la negrita y compara su presencia.',s.position==='center'?'Posición: has centrado la acción dentro de su tarjeta. Comprueba si encaja con el recorrido; centrar no es una mejora automática.':'Posición: la acción se alinea a la izquierda dentro de su tarjeta. Valora su relación con el texto.', 'No hay una combinación ganadora: pide a otra persona que identifique la acción principal y justifica tus decisiones.'];
  const f=byId('labFeedback');f.textContent=notes.join('\n\n');f.style.whiteSpace='pre-line';f.hidden=false;
 }
 byId('check').addEventListener('click',checkLab);
 byId('reset').addEventListener('click',()=>{
  byId('size').value=14;byId('space').value=14;
- for(const [name,value] of Object.entries({contrast:'low',weight:'700',position:'left'}))document.querySelectorAll(`input[name="${name}"]`).forEach(r=>r.checked=r.value===value);
+ for(const [name,value] of Object.entries({contrast:'low',weight:'400',position:'left'}))document.querySelectorAll(`input[name="${name}"]`).forEach(r=>r.checked=r.value===value);
  update();
 });
 function evidence(){
