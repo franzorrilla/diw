@@ -34,3 +34,12 @@ Foco visible petróleo (lima sobre petróleo), controles de al menos 44 px y red
 Mantener teclado, adaptación móvil y alternativas al portapapeles.
 Ejecutar scripts/check_site.py y revisar portada y Lab en móvil y escritorio cuando el navegador esté disponible.
 Publicar public/ completa. Las inserciones por URL se actualizan al publicar; el HTML copiado y otros alojamientos no.
+
+## Guion docente reutilizable (U03 y siguientes)
+- Portada de unidad: pregunta guía, experiencia breve, conceptos, acceso a laboratorios, ruta de sesiones, material y evidencia.
+- Laboratorio: reto concreto, duración y agrupamiento, procedimiento, interacción o plantilla, reflexión y exportación a Classroom.
+- Un registro de actividad no sustituye una explicación. No convertir una prueba exploratoria en una nota automática.
+- Usar casos ficticios explícitos cuando no existan datos de investigación; separar observación, interpretación y supuesto.
+- El CSS de unidad organiza el contenido. Los tokens de identidad siguen en estilos.css.
+- Formularios sin envío, cuentas ni persistencia: avisar que al cerrar o recargar se pierden respuestas y ofrecer descarga, copia y alternativa manual.
+- Cada laboratorio tiene URL propia y retorno a su unidad; debe funcionar dentro de Google Sites o en otra pestaña.
